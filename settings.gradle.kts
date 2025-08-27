@@ -17,6 +17,12 @@
 pluginManagement {
     includeBuild("build-logic")
     repositories {
+        maven {
+            url = uri("https://androidx.dev/snapshots/builds/13997617/artifacts/repository")
+        }
+        maven {
+            url = uri(file("/usr/local/google/home/aurimas/Code/tracing-plugin-playground/my-plugins/build/repo"))
+        }
         google {
             content {
                 includeGroupByRegex("com\\.android.*")
@@ -27,6 +33,10 @@ pluginManagement {
         mavenCentral()
         gradlePluginPortal()
     }
+}
+
+plugins {
+    id("net.liutikas.tracing") version "0.0.1"
 }
 
 dependencyResolutionManagement {
