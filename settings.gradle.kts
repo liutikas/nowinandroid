@@ -17,6 +17,11 @@
 pluginManagement {
     includeBuild("build-logic")
     repositories {
+        maven("https://androidx.dev/snapshots/builds/14968664/artifacts/repository") {
+            content {
+                includeGroupByRegex("androidx.*")
+            }
+        }
         google {
             content {
                 includeGroupByRegex("com\\.android.*")
@@ -32,6 +37,11 @@ pluginManagement {
 dependencyResolutionManagement {
     repositoriesMode = RepositoriesMode.FAIL_ON_PROJECT_REPOS
     repositories {
+        maven("https://androidx.dev/snapshots/builds/14968664/artifacts/repository") {
+            content {
+                includeGroupByRegex("androidx.*")
+            }
+        }
         google {
             content {
                 includeGroupByRegex("com\\.android.*")
